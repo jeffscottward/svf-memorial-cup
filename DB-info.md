@@ -1,0 +1,4 @@
+Database Info
+Connection string: mongodb://nodejitsu_jeffscottward:mp8g56ren9fkig7tqofurrvhjd@ds029950.mongolab.com:29950/nodejitsu_jeffscottward_nodejitsudb9050804341
+host: ds029950.mongolab.com
+password: mp8g56ren9fkig7tqofurrvhjd

@@ -1,6 +1,6 @@
 {
-  "name": "hackathon-starter",
-  "version": "0.0.0",
+  "name": "svf-memorial-cup",
+  "version": "0.0.0-1",
   "subdomain": "svfmemorialcup",
   "repository": {
     "type": "git",
@@ -51,5 +51,8 @@
     "mocha": "~1.17.1",
     "chai": "~1.9.0",
     "supertest": "~0.9.0"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
