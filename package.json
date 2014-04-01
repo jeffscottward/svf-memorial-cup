@@ -1,6 +1,7 @@
 {
   "name": "hackathon-starter",
   "version": "0.0.0",
+  "subdomain": "svfmemorialcup",
   "repository": {
     "type": "git",
     "url": "https://github.com/sahat/hackathon-starter.git"
