@@ -1,7 +1,7 @@
 module.exports = {
-  db: process.env.MONGODB|| 'mongodb://localhost:27017/test',
+  db: process.env.MONGODB|| 'mongodb://nodejitsu_jeffscottward:mp8g56ren9fkig7tqofurrvhjd@ds029950.mongolab.com:29950/nodejitsu_jeffscottward_nodejitsudb9050804341',
 
-  sessionSecret: process.env.SESSION_SECRET || 'poop',
+  sessionSecret: process.env.SESSION_SECRET || 'mp8g56ren9fkig7tqofurrvhjd',
 
   localAuth: true,
 
