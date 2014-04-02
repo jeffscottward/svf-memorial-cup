@@ -32,4 +32,21 @@ $(document).ready(function() {
 
   $(function() { $('#minimal .demo').bracket({init: bigData}) })
 
+  var bean = new Bean({
+    imageUrls: [
+      'img/8128_645461083814_508964_n.jpg',
+      'img/24474_1243095561422_2426049_n.jpg',
+      'img/31425_435337745738_1721678_n.jpg',
+      'img/33889_439728283924_2472719_n.jpg',
+      'img/306198_10101077801987979_1134062638_n.jpg',
+      'img/535596_10101077919297889_62444509_n.jpg'
+    ],
+    canvasId : 'main',
+    fillBody : true
+  });
+
+  bean.onReady(function(bean) {
+    setTimeout(function() {bean.start();}, 1000);
+  });
+
 });

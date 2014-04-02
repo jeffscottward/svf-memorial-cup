@@ -12,4 +12,8 @@
 //= require lib/jquery-2.1.0.min
 //= require lib/bootstrap.min
 //= require lib/plugins/jquery.bracket.min
+//= require lib/plugins/jquery.bracket.min
+//= require lib/plugins/Bean/Bean
+//= require lib/plugins/Bean/Plunger
+//= require lib/plugins/Bean/Plungers
 //= require main
