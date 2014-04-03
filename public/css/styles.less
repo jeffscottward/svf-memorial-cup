@@ -64,11 +64,31 @@ body {
     color: white;
   }
 }
+
+// Forms
+// -------------------------
+.form, form {
+  min-width: 320px;
+}
+
+.form-horizontal {
+  .form-group {
+    margin: auto auto 10px auto;
+  }
+  .control-label {
+    padding-top: 0;
+  }
+}
+
 // Social Buttons
 // -------------------------
 
 .btn-social {
   border-radius: 2px;
+}
+
+.btn {
+  margin-top: 10px;
 }
 
 // Font Awesome
@@ -108,6 +128,8 @@ body {
   bottom: 25px;
 }
 
+// Bracket Style Override
+// TODO: Fix this up
 div.jQBracket .team div.label {
   font-size: 14px;
   font-weight: normal;
@@ -116,4 +138,33 @@ div.jQBracket .team div.label {
   text-align: none;
   vertical-align: none;
   border-radius: none;
+}
+
+// Account Page
+// -------------------------
+
+.account,
+.account-top,
+.account-bottom {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.profile-information,
+.linked-accounts,
+.change-password,
+.delete-account {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 320px;
+  margin-right: 40px;
+
+  &:nth-child(2) {
+    margin-right: 0;
+  }
+}
+
+.linked-accounts span a {
+  display: block;
+  margin-top: 0;
 }

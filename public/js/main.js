@@ -20,9 +20,9 @@ $(document).ready(function() {
       fillBody : true
     });
 
-    bean.onReady(function(bean) {
-      setTimeout(function() {bean.start();}, 1000);
-    });
+    // bean.onReady(function(bean) {
+    //   setTimeout(function() {bean.start();}, 1000);
+    // });
 
   }
 

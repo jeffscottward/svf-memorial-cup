@@ -20,6 +20,8 @@ var userController = require('./controllers/user');
 var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
 var bracketController = require('./controllers/bracket');
+var newsController = require('./controllers/news');
+var photosController = require('./controllers/photos');
 
 /**
  * API keys + Passport configuration.
@@ -116,7 +118,8 @@ app.post('/signup', userController.postSignup);
 app.get('/contact', contactController.getContact);
 app.post('/contact', contactController.postContact);
 app.get('/bracket', bracketController.index);
-//app.post('/bracket', bracketController.postContact);
+app.get('/news', newsController.index);
+app.get('/photos', photosController.index);
 app.get('/account', passportConf.isAuthenticated, userController.getAccount);
 app.post('/account/profile', passportConf.isAuthenticated, userController.postUpdateProfile);
 app.post('/account/password', passportConf.isAuthenticated, userController.postUpdatePassword);
