@@ -43,18 +43,31 @@ $(document).ready(function() {
         [[1,2], [3,4], [5,6], [7,8]],
         [[9,1], [8,2]],
         [[1,3]]
-      ], [         /* LOSER BRACKET */
-        [[5,1], [1,2], [3,2], [6,9]],
-        [[8,2], [1,2], [6,2], [1,3]],
-        [[1,2], [3,1]],
-        [[3,0], [1,9]],
-        [[3,2]],
-        [[4,2]]
-      ], [         /* FINALS */
-        [[3,8], [1,2]],
-        [[2,1]]
       ]]
     }
+
+    // TODO: Save functionality
+    // function saveFn(data, userData) {
+    //   var json = jQuery.toJSON(data)
+    //   $('#saveOutput').text('POST '+userData+' '+json)
+    //   /* You probably want to do something like this
+    //   jQuery.ajax("rest/"+userData, {contentType: 'application/json',
+    //                                 dataType: 'json',
+    //                                 type: 'post',
+    //                                 data: json})
+    //   */
+    // }
+    // $(function() {
+    //     var container = $('div#save .demo')
+    //     container.bracket({
+    //       init: saveData,
+    //       save: saveFn,
+    //       userData: "http://myapi"})
+    //
+    //     /* You can also inquiry the current data */
+    //     var data = container.bracket('data')
+    //     $('#dataOutput').text(jQuery.toJSON(data))
+    // });
 
     $(function() { $cache.triggers.bracketContainer.bracket({init: bigData}) })
 
