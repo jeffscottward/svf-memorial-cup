@@ -83,6 +83,7 @@ exports.postSignup = function(req, res, next) {
   req.assert('email', 'Email is not valid').isEmail();
   req.assert('password', 'Password must be at least 4 characters long').len(4);
   req.assert('tel', 'Telephone must be at least 10 characters long').len(10);
+  req.assert('shirt', 'Shirt field is filled out').notEmpty();
   req.assert('confirmPassword', 'Passwords do not match').equals(req.body.password);
 
   var errors = req.validationErrors();
@@ -95,7 +96,8 @@ exports.postSignup = function(req, res, next) {
   var user = new User({
     email: req.body.email,
     password: req.body.password,
-    tel: req.body.tel
+    tel: req.body.tel,
+    shirt: req.body.shirt
   });
 
   user.save(function(err) {
@@ -133,9 +135,6 @@ exports.postUpdateProfile = function(req, res, next) {
     if (err) return next(err);
     user.email = req.body.email || '';
     user.profile.name = req.body.name || '';
-    user.profile.gender = req.body.gender || '';
-    user.profile.location = req.body.location || '';
-    user.profile.website = req.body.website || '';
 
     user.save(function(err) {
       if (err) return next(err);

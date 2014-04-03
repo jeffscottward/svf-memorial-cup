@@ -220,6 +220,35 @@ div.jQBracket .team div.label {
         height: 100%;
         display: block;
         background: white;
+        border: 5px solid white;
+        -webkit-transition:  all 500ms ease-out;
+        -moz-transition:     all 500ms ease-out;
+        -o-transition:       all 500ms ease-out;
+        transition:          all 500ms ease-out;
+      }
+
+      &:nth-of-type(2n) {
+        img {
+          &:hover {
+            -webkit-transform: scale(1.5) rotateZ(10deg);
+          }
+        }
+      }
+      &:nth-of-type(2n+1) {
+        img {
+          &:hover {
+            -webkit-transform: scale(1.5) rotateZ(-10deg);
+          }
+        }
       }
     }
+}
+
+// Sign Up Page
+// --------------------------
+
+form.paypal-button {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0 0 20px;
 }
