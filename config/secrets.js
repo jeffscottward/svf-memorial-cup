@@ -1,5 +1,5 @@
 module.exports = {
-  db: 'mongodb://nodejitsu_jeffscottward:mp8g56ren9fkig7tqofurrvhjd@ds027479.mongolab.com:027479/nodejitsu_jeffscottward_nodejitsudb9050804341',
+  db: process.env.MONGODB|| 'mongodb://nodejitsu_jeffscottward:mp8g56ren9fkig7tqofurrvhjd@ds029950.mongolab.com:29950/nodejitsu_jeffscottward_nodejitsudb9050804341',
 
   sessionSecret: process.env.SESSION_SECRET || 'password',
 
