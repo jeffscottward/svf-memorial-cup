@@ -9,8 +9,8 @@
       a.navbar-brand(href='/') SVF Memorial Cup
     .collapse.navbar-collapse
       ul.nav.navbar-nav
-        li(class=title=='Home'?'active':undefined)
-          a(href='/') Home
+        //- li(class=title=='Home'?'active':undefined)
+        //-   a(href='/') Home
         li(class=title=='Bracket'?'active':undefined)
           a(href='/bracket') Bracket
         li(class=title=='Photos'?'active':undefined)
@@ -21,8 +21,8 @@
         if !user
           //- li(class=title=='Contact'?'active':undefined)
           //-   a(href='/contact') Contact
-          li(class=title=='API Browser'?'active':undefined)
-            a(href='/api') APIs
+          //- li(class=title=='API Browser'?'active':undefined)
+          //-   a(href='/api') APIs
           li(class=title=='Login'?'active':undefined)
             a(href='/login') Login
           if secrets.localAuth
