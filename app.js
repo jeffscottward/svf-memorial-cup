@@ -1,7 +1,6 @@
 /**
  * Module dependencies.
  */
-
 var express = require('express');
 var MongoStore = require('connect-mongo')(express);
 var flash = require('express-flash');
@@ -14,7 +13,6 @@ var connectAssets = require('connect-assets');
 /**
  * Load controllers.
  */
-
 var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
 var apiController = require('./controllers/api');
@@ -26,20 +24,17 @@ var photosController = require('./controllers/photos');
 /**
  * API keys + Passport configuration.
  */
-
 var secrets = require('./config/secrets');
 var passportConf = require('./config/passport');
 
 /**
  * Create Express server.
  */
-
 var app = express();
 
 /**
  * Mongoose configuration.
  */
-
 mongoose.connect(secrets.db);
 mongoose.connection.on('error', function() {
   console.error('✗ MongoDB Connection Error. Please make sure MongoDB is running.');
@@ -48,7 +43,6 @@ mongoose.connection.on('error', function() {
 /**
  * Express configuration.
  */
-
 var hour = 3600000;
 var day = (hour * 24);
 var month = (day * 30);
@@ -105,27 +99,36 @@ app.use(express.errorHandler());
  * Application routes.
  */
 app.get('/', bracketController.index);
+
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
+
 app.get('/forgot', userController.getForgot);
 app.post('/forgot', userController.postForgot);
+
 app.get('/reset/:token', userController.getReset);
 app.post('/reset/:token', userController.postReset);
+
 app.get('/signup', userController.getSignup);
 app.post('/signup', userController.postSignup);
+
 app.get('/contact', contactController.getContact);
 app.post('/contact', contactController.postContact);
+
 app.get('/bracket', bracketController.index);
+
 app.get('/news', newsController.index);
+
 app.get('/photos', photosController.index);
+
 app.get('/account', passportConf.isAuthenticated, userController.getAccount);
 app.post('/account/profile', passportConf.isAuthenticated, userController.postUpdateProfile);
 app.post('/account/password', passportConf.isAuthenticated, userController.postUpdatePassword);
 app.post('/account/delete', passportConf.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConf.isAuthenticated, userController.getOauthUnlink);
-app.get('/api', apiController.getApi);
 
+app.get('/api', apiController.getApi);
 app.get('/api/paypal', apiController.getPayPal);
 app.get('/api/paypal/success', apiController.getPayPalSuccess);
 app.get('/api/paypal/cancel', apiController.getPayPalCancel);
