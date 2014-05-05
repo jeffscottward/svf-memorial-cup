@@ -21,9 +21,13 @@ block content
       .col-sm-7
         input.form-control(type='tel', name='tel', id='tel', placeholder='Telephone' required)
     .form-group
-      label.col-sm-3.control-label(for='shirt') Shirt Size
+      label.col-sm-3.control-label(for='shirt') Shirt Size ( S-M-L-XL )
       .col-sm-7
-        input.form-control(type='number', name='shirt', id='shirt', placeholder='Shirt Size' required)
+        input.form-control(type='text', name='shirt', id='shirt', placeholder='Shirt Size' required)
+        .form-group
+      label.col-sm-3.control-label(for='team') Team Name
+      .col-sm-7
+        input.form-control(type='text', name='team', id='team', placeholder='Team Name' required)
     .form-group
       .col-sm-offset-3.col-sm-7
         button.btn.btn-success(type='submit')

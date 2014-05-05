@@ -11,12 +11,12 @@
       ul.nav.navbar-nav
         //- li(class=title=='Home'?'active':undefined)
         //-   a(href='/') Home
-        li(class=title=='Bracket'?'active':undefined)
-          a(href='/bracket') Bracket
-        li(class=title=='Photos'?'active':undefined)
-          a(href='/photos') Photos
-        li(class=title=='News'?'active':undefined)
-          a(href='/news') News
+        //- li(class=title=='Bracket'?'active':undefined)
+        //-   a(href='/bracket') Bracket
+        //- li(class=title=='Photos'?'active':undefined)
+        //-   a(href='/photos') Photos
+        //- li(class=title=='News'?'active':undefined)
+        //-   a(href='/news') News
       ul.nav.navbar-nav.navbar-right
         if !user
           //- li(class=title=='Contact'?'active':undefined)
@@ -25,9 +25,9 @@
           //-   a(href='/api') APIs
           li(class=title=='Login'?'active':undefined)
             a(href='/login') Login
-          if secrets.localAuth
-            li(class=title=='Create Account'?'active':undefined)
-              a(href='/signup') Create Account
+          //- if secrets.localAuth
+          //-   li(class=title=='Create Account'?'active':undefined)
+          //-     a(href='/signup') Create Account
         else
           li(class=title=='Contact'?'active':undefined)
             a(href='/contact') Contact
