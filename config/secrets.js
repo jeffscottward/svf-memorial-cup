@@ -97,10 +97,10 @@ module.exports = {
   },
 
   paypal: {
-    host: process.env.PAYPAL_HOST || 'api.sandbox.paypal.com',
+    host: process.env.PAYPAL_HOST || 'api.paypal.com',
     client_id: process.env.PAYPAL_ID || 'Ab8yYxCnQyDlNhTKAhwOuDN68G26sjyc7D6HIk1DYM-Q_3QME3wEejs2ndUG',
     client_secret: process.env.PAYPAL_SECRET || 'EFwg3BAM2QogdCF0kvOQPaY_mY4sEhz9LNUOwGbyBl31twWJ8oEL67Td19GQ',
-    returnUrl: process.env.PAYPAL_RETURN_URL || 'http://localhost:3000/api/paypal/success',
-    cancelUrl: process.env.PAYPAL_CANCEL_URL || 'http://localhost:3000/api/paypal/cancel'
+    returnUrl: process.env.PAYPAL_RETURN_URL || '/api/paypal/success',
+    cancelUrl: process.env.PAYPAL_CANCEL_URL || '/api/paypal/cancel'
   }
 };
